@@ -1,6 +1,6 @@
 # SEI CERT C Coding Standard samples
 
-This repo contains unaltered\* copies of all sample code from the _rules_ outlined in the [SEI CERT C Coding Standard](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard). Sample code for the standard's various _recommendations_ have not been included and there is no outstanding plan to do so. These source code files are not guaranteed to compile cleanly, or even at all. They are meant for use in gauging the effectiveness of static analyzers against CERT's rules for the C programming language.
+This repo contains copies of all sample code from the _rules_ outlined in the [SEI CERT C Coding Standard](https://wiki.sei.cmu.edu/confluence/display/c/SEI+CERT+C+Coding+Standard). Sample code for the standard's various _recommendations_ have not been included and there is no outstanding plan to do so. These source code files have been modify to compile. Some of them are completely or partially commented because i don't find a way to compile them. They are meant for use in gauging the effectiveness of static analyzers (for my case it is SonarQube) against CERT's rules for the C programming language.
 
 \* A single, one-line comment has been added to the top of each code sample to help associate it with its parent rule and, if available, provide some context.
 
