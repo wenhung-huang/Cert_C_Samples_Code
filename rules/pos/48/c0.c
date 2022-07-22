@@ -1,5 +1,11 @@
 // POS48-C: Compliant Solution
-mutex_t theLock;
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <unistd.h>
+#include <threads.h>
+
+mtx_t theLock;
 int data;
  
 int cleanupAndFinish(void) {

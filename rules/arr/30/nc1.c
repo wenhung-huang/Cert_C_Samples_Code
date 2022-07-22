@@ -1,9 +1,13 @@
 // ARR30-C: Noncompliant Code Example (Dereferencing Past-the-End Pointer)
+#include <stdio.h>
+#include <stddef.h>
+#include <wchar.h>
+/*
 error_status_t _RemoteActivation(
-      /* ... */, WCHAR *pwszObjectName, ... ) {
+      , WCHAR *pwszObjectName, ... ) {
    *phr = GetServerPath(
               pwszObjectName, &pwszObjectName);
-    /* ... */
+
 }
  
 HRESULT GetServerPath(
@@ -22,5 +26,6 @@ HRESULT GetMachineName(
   LPWSTR pwszTemp = pwszPath + 2;
   while (*pwszTemp != L'\\')
     *pwszServerName++ = *pwszTemp++;
-  /* ... */
+
 }
+*/

@@ -3,7 +3,7 @@
 #include <stdlib.h>
    
 int main(void) {
-  FILE *f = fopen(filename, "w");
+  FILE *f = fopen("toto.txt", "w");
   if (NULL == f) {
     exit(EXIT_FAILURE);
   }

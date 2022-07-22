@@ -1,5 +1,8 @@
 // POS50-C: Compliant Solution (Thread-Local Storage)
 /* Declare val as a thread-local value */
+#include <stdio.h>
+#include <stddef.h>
+#include <pthread.h>
 __thread int val;
  
 void *childThread(void *val) {

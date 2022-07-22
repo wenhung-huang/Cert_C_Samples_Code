@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
-  
+/*
 void func(void) {
   char *tmpvar;
   char *tempvar;
@@ -13,31 +13,31 @@ void func(void) {
   err = getenv_s(&requiredSize, NULL, 0, "TMP");
  
   if (err) {
-    /* Handle error */
+    // Handle error 
   }
   
   tmpvar = (char *)malloc(requiredSize);
   if (!tmpvar) {
-    /* Handle error */
+    // Handle error 
   }
   err = getenv_s(&requiredSize, tmpvar, requiredSize, "TMP" );
  
   if (err) {
-    /* Handle error */
+    // Handle error 
   }
   err = getenv_s(&requiredSize, NULL, 0, "TEMP");
   if (err) {
-    /* Handle error */
+    // Handle error 
   }
   
   tempvar = (char *)malloc(requiredSize);
   if (!tempvar) {
-    /* Handle error */
+    // Handle error 
   }
   err = getenv_s(&requiredSize, tempvar, requiredSize, "TEMP" );
  
   if (err) {
-    /* Handle error */
+    // Handle error 
   }
   if (strcmp(tmpvar, tempvar) == 0) {
     printf("TMP and TEMP are the same.\n");
@@ -49,3 +49,4 @@ void func(void) {
   free(tempvar);
   tempvar = NULL;
 }
+*/

@@ -3,7 +3,7 @@
 extern char * bash_groupname_completion(const char *, int);  
  
 /* In a.c */
-#include "bashline.h"
+//#include "bashline.h"
  
 void f(const char *s, int i) {
   bash_groupname_completion(s, i); 

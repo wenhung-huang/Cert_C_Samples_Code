@@ -1,4 +1,5 @@
 // POS49-C: Noncompliant Code Example (Bit-field)
+#include <pthread.h>
 struct multi_threaded_flags {
   unsigned int flag1 : 2;
   unsigned int flag2 : 2;

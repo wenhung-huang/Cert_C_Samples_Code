@@ -1,6 +1,7 @@
 // POS37-C: Noncompliant Code Example
 /* Code intended to run with elevated privileges */
- 
+int main(void){
+int need_more_privileges;
 /* Temporarily drop privileges */
 if (seteuid(getuid()) != 0) {
   /* Handle error */
@@ -29,3 +30,5 @@ if (setuid(getuid()) != 0) {
  * but if privilege relinquishment failed,
  * attacker can regain elevated privileges!
  */
+return 0;
+}

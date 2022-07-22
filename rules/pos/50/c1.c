@@ -1,5 +1,8 @@
 // POS50-C: Compliant Solution (Static Storage)
 /* Declare val as a global static variable */
+#include <stdio.h>
+#include <stddef.h>
+#include <pthread.h>
 int val;
  
 void *childThread(void *val) {

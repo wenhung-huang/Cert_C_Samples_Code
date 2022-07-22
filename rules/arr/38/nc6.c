@@ -1,6 +1,18 @@
 // ARR38-C: Noncompliant Code Example (Heartbleed)
+
+#include <stdio.h>
+#include <errno.h>
+#include <unistd.h>
+#include <malloc.h>
+#include <string.h>
+#include <sys/socket.h>
+#include <resolv.h>
+#include <netdb.h>
+#include <openssl/ssl.h>
+#include <openssl/err.h>
+
 int dtls1_process_heartbeat(SSL *s) {        
-  unsigned char *p = &s->s3->rrec.data[0], *pl;
+  unsigned char *p; //= &s->s3->rrec.data[0], *pl;
   unsigned short hbtype;
   unsigned int payload;
   unsigned int padding = 16; /* Use minimum padding */
@@ -8,7 +20,7 @@ int dtls1_process_heartbeat(SSL *s) {
   /* Read type and payload length first */
   hbtype = *p++;
   n2s(p, payload);
-  pl = p;
+  unsigned char pl = p;
   
   /* ... More code ... */
   

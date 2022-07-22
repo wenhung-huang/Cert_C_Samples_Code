@@ -1,5 +1,5 @@
 // FIO42-C: Compliant Solution (Windows)
-#include <Windows.h>
+/*#include <Windows.h>
   
 int func(LPCTSTR filename) {
   HANDLE hFile = CreateFile(filename, GENERIC_READ, 0, NULL,
@@ -8,10 +8,11 @@ int func(LPCTSTR filename) {
   if (INVALID_HANDLE_VALUE == hFile) {
     return -1;
   }
-  /* ... */ 
+
   if (!CloseHandle(hFile)) {
     return -1;
   }
   
   return 0;
 }
+*/

@@ -1,4 +1,8 @@
 // POS50-C: Noncompliant Code Example (Thread-Local Storage)
+#include <stdio.h>
+#include <stddef.h>
+#include <pthread.h>
+
 __thread int val;
  
 void *childThread(void *val) {

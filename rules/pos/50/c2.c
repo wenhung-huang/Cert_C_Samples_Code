@@ -1,4 +1,8 @@
 // POS50-C: Compliant Solution (Automatic Storage)
+#include <stdio.h>
+#include <stddef.h>
+#include <pthread.h>
+
 void *childThread(void *val) {
   /* Correctly prints 1 */
   int *res = (int *)val;

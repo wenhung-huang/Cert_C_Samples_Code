@@ -1,4 +1,6 @@
 // ARR30-C: Noncompliant Code Example (Forming Out-of-Bounds Pointer)
+#include <stddef.h>
+
 enum { TABLESIZE = 100 };
  
 static int table[TABLESIZE];

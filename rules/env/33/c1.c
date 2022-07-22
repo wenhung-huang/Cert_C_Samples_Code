@@ -1,4 +1,5 @@
 // ENV33-C: Compliant Solution (Windows)
+/*
 #include <Windows.h>
  
 void func(TCHAR *input) {
@@ -7,8 +8,9 @@ void func(TCHAR *input) {
   si.cb = sizeof(si);
   if (!CreateProcess(TEXT("any_cmd.exe"), input, NULL, NULL, FALSE,
                      0, 0, 0, &si, &pi)) {
-    /* Handle error */
+    // Handle error 
   }
   CloseHandle(pi.hThread);
   CloseHandle(pi.hProcess);
 }
+*/

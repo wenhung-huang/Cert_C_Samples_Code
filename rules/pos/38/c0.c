@@ -1,10 +1,24 @@
 // POS38-C: Compliant Solution
+#include <stdio.h>
+#include <stddef.h>
+#include <pthread.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+
+int main(){
+
 char c;
  
 pid_t pid;
  
 /* Open file and remember file status  */
 struct stat orig_st;
+char * filename;
 if (lstat( filename, &orig_st) != 0) {
   /* handle error */
 }
@@ -57,4 +71,5 @@ else { /*parent*/
   read(fd, &c, 1);
   printf("parent:%c\n", c);
   close(fd);
+}
 }

@@ -1,11 +1,14 @@
 // ERR32-C: Compliant Solution (POSIX)
 #include <signal.h>
 #include <stdlib.h>
-#include <errno.h>
 #include <sys/wait.h>
- 
+#include <stdio.h>
+#include <sys/cdefs.h>
+#include <errno.h>
+
+
 void reaper(int signum) {
-  errno_t save_errno = errno;
+  //errno_t save_errno = errno;
   errno = 0;
   for (;;) {
     int rc = waitpid(-1, NULL, WNOHANG);
@@ -16,7 +19,7 @@ void reaper(int signum) {
   if (ECHILD != errno) {
     /* Handle error */
   }
-  errno = save_errno;
+  //errno = save_errno;
 }
  
 int main(void) {

@@ -1,4 +1,15 @@
 // POS49-C: Compliant Solution (Bit-field)
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <signal.h>
+#include <stdint.h>
+#include <pthread.h>
+
 struct multi_threaded_flags {
   volatile unsigned int flag1 : 2;
   volatile unsigned int flag2 : 2;
@@ -9,7 +20,7 @@ union mtf_protect {
   long padding;
 };
  
-static_assert(sizeof(long) >= sizeof(struct multi_threaded_flags));
+//static_assert(sizeof(long) >= sizeof(struct multi_threaded_flags));
  
 struct mtf_mutex {
   union mtf_protect u;

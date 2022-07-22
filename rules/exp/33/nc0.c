@@ -1,4 +1,6 @@
 // EXP33-C: Noncompliant Code Example (Return-by-Reference)
+#include <stddef.h>
+
 void set_flag(int number, int *sign_flag) {
   if (NULL == sign_flag) {
     return;

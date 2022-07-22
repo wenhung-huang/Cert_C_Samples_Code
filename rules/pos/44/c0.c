@@ -1,4 +1,14 @@
 // POS44-C: Compliant Solution
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <signal.h>
+#include <pthread.h>
+
 void func(void *foo) {
   /* Execution of thread */
 }

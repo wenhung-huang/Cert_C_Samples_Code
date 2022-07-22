@@ -1,4 +1,5 @@
 // MSC30-C: Compliant Solution (Windows)
+/*
 #include <Windows.h>
 #include <bcrypt.h>
 #include <stdio.h>
@@ -11,12 +12,13 @@ void func(void) {
   if (!BCRYPT_SUCCESS(
           BCryptOpenAlgorithmProvider(&Prov, BCRYPT_RNG_ALGORITHM,
                                       NULL, 0))) {
-    /* handle error */
+    // handle error 
   }
   if (!BCRYPT_SUCCESS(BCryptGenRandom(Prov, (PUCHAR) (&Buffer),
                                       sizeof(Buffer), 0))) {
-    /* handle error */
+    // handle error 
   }
   printf("Random number: %d\n", Buffer);
   BCryptCloseAlgorithmProvider(Prov, 0);
 }
+*/

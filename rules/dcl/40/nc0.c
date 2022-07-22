@@ -7,4 +7,4 @@ int f(void) {
 }
  
 /* In b.c */
-short i;   /* UB 15 */
+short g;   /* UB 15 */

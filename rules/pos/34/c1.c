@@ -1,4 +1,13 @@
 // POS34-C: Compliant Solution (Heap Memory)
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <signal.h>
+
 int func(const char *var) {
   static char *oldenv;
   const char *env_format = "TEST=%s";

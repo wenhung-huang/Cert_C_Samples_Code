@@ -1,4 +1,6 @@
 // ARR30-C: Compliant Solution
+#include <stddef.h>
+
 enum { TABLESIZE = 100 };
  
 static int table[TABLESIZE];

@@ -1,8 +1,9 @@
 // MEM30-C: Compliant Solution
+/*
 void gdClipSetAdd(gdImagePtr im, gdClipRectanglePtr rect) {
   gdClipRectanglePtr more;
   if (im->clip == 0) {
-    /* ... */
+    
   }
   if (im->clip->count == im->clip->max) {
     more = gdRealloc (im->clip->list,(im->clip->max + 8) *
@@ -15,3 +16,4 @@ void gdClipSetAdd(gdImagePtr im, gdClipRectanglePtr rect) {
   im->clip->count++;
  
 }
+*/

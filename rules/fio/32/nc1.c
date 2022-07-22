@@ -1,6 +1,6 @@
 // FIO32-C: Noncompliant Code Example (Windows)
-#include <Windows.h>
-  
+//#include <Windows.h>
+/*
 void func(const TCHAR *file_name) {
   HANDLE hFile = CreateFile(
     file_name,
@@ -9,12 +9,13 @@ void func(const TCHAR *file_name) {
     FILE_ATTRIBUTE_NORMAL, NULL
   );
   if (hFile == INVALID_HANDLE_VALUE) {
-    /* Handle error */
+    // Handle error 
   } else if (GetFileType(hFile) != FILE_TYPE_DISK) {
-    /* Handle error */
+    // Handle error 
     CloseHandle(hFile);
   } else {
-    /* Operate on the file */
+    // Operate on the file 
     CloseHandle(hFile);
   }
 }
+*/

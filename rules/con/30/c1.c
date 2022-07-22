@@ -22,7 +22,7 @@ int main(void) {
  
   /* Create threads that would store specific storage */
   for (size_t i = 0; i < MAX_THREADS; i++) {
-    if (thrd_success != thrd_create(&thread_id[i], function, NULL)) {
+    if (thrd_success != thrd_create(&thread_id[i], destructor, NULL)) {
       /* Handle error */
     }
   }

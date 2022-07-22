@@ -1,4 +1,9 @@
 // POS50-C: Compliant Solution (Allocated Storage)
+#include <stdio.h>
+#include <stddef.h>
+#include <pthread.h>
+#include <stdlib.h>
+
 void *childThread(void *val) {
   /* Correctly prints 1 */
   int *res = (int *)val;
@@ -7,7 +12,7 @@ void *childThread(void *val) {
   return NULL;
 }
  
-void createThread(pthread *tid) {
+void createThread(pthread_t *tid) {
   int result;
   /* Copy data into dynamic memory */
   int *val = malloc(sizeof(int));
@@ -16,6 +21,7 @@ void createThread(pthread *tid) {
     /* Handle error */
   }
   *val = 1;
+  int id;
   if ((result = pthread_create(&id, NULL, childThread, val)) != 0) {
     /* Handle error */
   }

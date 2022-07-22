@@ -26,7 +26,7 @@ int main() {
     /* Handle error */
   }
  
-  if ((ret = pthread_mutexattr_settype( &attr, PTHREAD_MUTEX_ERRORCHECK)) != 0) {
+  if ((ret = pthread_mutexattr_settype( &attr, PTHREAD_MUTEX_ERRORCHECK_NP)) != 0) {
     /* Handle error */
   }
  

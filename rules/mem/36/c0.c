@@ -18,7 +18,7 @@ void func(void) {
     /* Handle error */
   }
    
-  if (NULL == (memcpy(ptr1, ptr, sizeof(int))) {
+  if (NULL == (memcpy(ptr1, ptr, sizeof(int)))) {
     /* Handle error */
   }
    

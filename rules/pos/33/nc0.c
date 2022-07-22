@@ -1,5 +1,15 @@
 // POS33-C: Noncompliant Code Example
-char *filename = /* something */;
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <signal.h>
+
+int main(){
+char *filename  /* something */;
  
 pid_t pid = vfork();
  if (pid == 0 )  /* child */ {
@@ -7,4 +17,5 @@ pid_t pid = vfork();
      /* Handle error */
    }
    _exit(1);  /* in case execve() fails */
+}
 }

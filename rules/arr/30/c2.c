@@ -1,4 +1,7 @@
 // ARR30-C: Compliant Solution
+/*
+#include <stddef.h>
+
 HRESULT GetMachineName(
   wchar_t *pwszPath,
   wchar_t wszMachineName[MAX_COMPUTERNAME_LENGTH_FQDN+1])
@@ -14,5 +17,6 @@ HRESULT GetMachineName(
     *pwszServerName++ = *pwszTemp++;
   }
  
-  /* ... */
+  
 }
+*/

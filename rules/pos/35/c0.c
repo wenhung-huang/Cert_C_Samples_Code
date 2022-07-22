@@ -1,7 +1,16 @@
 // POS35-C: Compliant Solution
-char *filename = /* file name */;
-char *userbuf = /* user data */;
-unsigned int userlen = /* length of userbuf string */;
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+
+int main(){
+char *filename /* file name */;
+char *userbuf /* user data */;
+unsigned int userlen /* length of userbuf string */;
  
 struct stat lstat_info;
 struct stat fstat_info;
@@ -26,4 +35,5 @@ if (lstat_info.st_mode == fstat_info.st_mode &&
   if (write(fd, userbuf, userlen) < userlen) {
     /* Handle Error */
   }
+}
 }

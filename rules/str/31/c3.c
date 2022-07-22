@@ -12,9 +12,8 @@ void func(void) {
     /* Handle error */
     return;
   }
- 
-  if ((ssize_t size = getline(&buffer, &buffer_size, stdin))
-        == -1) {
+  ssize_t size = getline(&buffer, &buffer_size, stdin);
+  if ( size == -1) {
     /* Handle error */
   } else {
     char *p = strchr(buffer, '\n');

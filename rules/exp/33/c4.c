@@ -10,5 +10,5 @@ void func(void) {
  
   cpu_time = ((double) clock()) / CLOCKS_PER_SEC;
   gettimeofday(&tv, NULL);
-  srandom((getpid() << 16) ^ tv.tv_sec ^ tv.tv_usec ^ cpu_time);
+  srandom((getpid() << 16) ^ tv.tv_sec ^ tv.tv_usec ^ (int)cpu_time);
 }

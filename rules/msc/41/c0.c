@@ -1,5 +1,7 @@
 // MSC41-C: Compliant Solution
 /* Returns nonzero if authenticated */
+#include <stdio.h>
+
 int authenticate(const char* code);
  
 int main() {

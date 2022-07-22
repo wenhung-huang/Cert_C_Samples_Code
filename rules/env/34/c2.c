@@ -3,7 +3,7 @@
 #include <errno.h>
 #include <string.h>
 #include <stdio.h>
-  
+/*
 void func(void) {
   char *tmpvar;
   char *tempvar;
@@ -11,11 +11,11 @@ void func(void) {
  
   errno_t err = _dupenv_s(&tmpvar, &len, "TMP");
   if (err) {
-    /* Handle error */
+    // Handle error 
   }
   err = _dupenv_s(&tempvar, &len, "TEMP");
   if (err) {
-    /* Handle error */
+    // Handle error 
   }
  
   if (strcmp(tmpvar, tempvar) == 0) {
@@ -28,3 +28,4 @@ void func(void) {
   free(tempvar);
   tempvar = NULL;
 }
+*/

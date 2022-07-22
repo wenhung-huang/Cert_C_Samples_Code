@@ -1,4 +1,6 @@
 // POS37-C: Compliant Solution
+#include <sys/types.h>
+int main (){
 /* Store the privileged ID for later verification */
 uid_t privid = geteuid();
  
@@ -10,7 +12,7 @@ if (seteuid(getuid()) != 0) {
 }
  
 /* Code intended to run with lower privileges  */
- 
+int need_more_privileges;
 if (need_more_privileges) {
   /* Restore Privileges */
   if (seteuid(privid) != 0) {
@@ -42,3 +44,4 @@ if (setuid(0) != -1) {
  * Code intended to run with lower privileges;
  * attacker cannot regain elevated privileges
  */
+}

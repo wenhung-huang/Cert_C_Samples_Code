@@ -1,7 +1,7 @@
 // CON38-C: Compliant Solution (Windows, Condition Variables)
-#include <Windows.h>
+//#include <Windows.h>
 #include <stdio.h>
-  
+/*  
 CRITICAL_SECTION lock;
 CONDITION_VARIABLE cond;
   
@@ -16,20 +16,20 @@ DWORD WINAPI run_step(LPVOID t) {
     printf("Thread %zu is sleeping...\n", my_step);
   
     if (!SleepConditionVariableCS(&cond, &lock, INFINITE)) {
-      /* Handle error */
+      // Handle error 
     }
  
     printf("Thread %zu woke up\n", my_step);
   }
  
-  /* Do processing ... */
+  // Do processing ... 
   printf("Thread %zu is processing...\n", my_step);
  
   current_step++;
   
   LeaveCriticalSection(&lock);
   
-  /* Signal ALL waiting tasks */
+  // Signal ALL waiting tasks 
   WakeAllConditionVariable(&cond);
   
   printf("Thread %zu is exiting...\n", my_step);
@@ -44,15 +44,16 @@ int main(void) {
   InitializeCriticalSection(&lock);
   InitializeConditionVariable(&cond);
   
-  /* Create threads */
+  // Create threads 
   for (size_t i = 0; i < NTHREADS; ++i) {
     threads[i] = CreateThread(NULL, 0, run_step, (LPVOID)i, 0, NULL);
   }
   
-  /* Wait for all threads to complete */
+  // Wait for all threads to complete
   WaitForMultipleObjects(NTHREADS, threads, TRUE, INFINITE);
   
   DeleteCriticalSection(&lock);
   
   return 0;
 }
+*/

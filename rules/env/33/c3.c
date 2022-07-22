@@ -1,4 +1,5 @@
 // ENV33-C: Compliant Solution (Windows)
+/*
 #include <Windows.h>
 #include <ShlObj.h>
 #include <Shlwapi.h>
@@ -14,13 +15,14 @@ void func(void) {
  
   hr = SHGetKnownFolderPath(&FOLDERID_Documents, 0, NULL, &path);
   if (FAILED(hr)) {
-    /* Handle error */
+    // Handle error 
   }
   if (!PathCombineW(full_path, path, L".config")) {
-    /* Handle error */
+    // Handle error 
   }
   CoTaskMemFree(path);
   if (!DeleteFileW(full_path)) {
-    /* Handle error */
+    // Handle error 
   }
 }
+*/

@@ -1,4 +1,15 @@
 // POS52-C: Noncompliant Code Example
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <signal.h>
+#include <stdint.h>
+#include <pthread.h>
+
 pthread_mutexattr_t attr;
 pthread_mutex_t mutex;
  
@@ -27,6 +38,7 @@ void thread_foo(void *ptr) {
 int main() {
   pthread_t thread;
   int result;
+  int PTHREAD_MUTEX_ERRORCHECK;
  
   if ((result = pthread_mutexattr_settype(
       &mutex, PTHREAD_MUTEX_ERRORCHECK)) != 0) {

@@ -1,4 +1,5 @@
 // MSC32-C: Compliant Solution (Windows)
+/*
 #include <stdio.h>
 #include <Windows.h>
 #include <Bcrypt.h>
@@ -17,7 +18,8 @@ void func(void) {
     if (status == STATUS_SUCCESS) {
       printf("%ld, ", rand_buf);
     } else {
-      /* Handle Error */
+      // Handle Error 
     }
   }
 }
+*/

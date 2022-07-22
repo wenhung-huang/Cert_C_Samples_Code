@@ -1,8 +1,12 @@
 // POS51-C: Compliant Solution
+#include <stdlib.h>
+#include <stddef.h>
+#include <pthread.h>
+/*
 typedef struct {
   int balance;
   pthread_mutex_t balance_mutex;
-  unsigned int id; /* Should never be changed after initialized */
+  unsigned int id; // Should never be changed after initialized 
 } bank_account;
  
 unsigned int global_id = 1;
@@ -11,13 +15,13 @@ void create_bank_account(bank_account **ba, int initial_amount) {
   int result;
   bank_account *nba = malloc(sizeof(bank_account));
   if (nba == NULL) {
-    /* Handle error */
+    // Handle error 
   }
  
   nba->balance = initial_amount;
   result = pthread_mutex_init(&nba->balance_mutex, NULL);
   if (result != 0) {
-    /* Handle error */
+    // Handle error 
   }
  
   nba->id = global_id++;
@@ -31,30 +35,30 @@ void *deposit(void *ptr) {
   if (args->from->id == args->to->id)
         return;
  
-  /* Ensure proper ordering for locking */
+  // Ensure proper ordering for locking 
   if (args->from->id < args->to->id) {
     if ((result = pthread_mutex_lock(&(args->from->balance_mutex))) != 0) {
-      /* Handle error */
+      // Handle error 
     }
     if ((result = pthread_mutex_lock(&(args->to->balance_mutex))) != 0) {
-      /* Handle error */
+      // Handle error 
     }
   } else {
     if ((result = pthread_mutex_lock(&(args->to->balance_mutex))) != 0) {
-      /* Handle error */
+      // Handle error 
     }
     if ((result = pthread_mutex_lock(&(args->from->balance_mutex))) != 0) {
-      /* Handle error */
+      // Handle error 
     }
   }
  
-  /* Not enough balance to transfer */
+  /* Not enough balance to transfer 
   if (args->from->balance < args->amount) {
     if ((result = pthread_mutex_unlock(&(args->from->balance_mutex))) != 0) {
-      /* Handle error */
+      // Handle error 
     }
     if ((result = pthread_mutex_unlock(&(args->to->balance_mutex))) != 0) {
-      /* Handle error */
+      // Handle error 
     }
     return;
   }
@@ -63,12 +67,13 @@ void *deposit(void *ptr) {
   args->to->balance += args->amount;
  
   if ((result = pthread_mutex_unlock(&(args->from->balance_mutex))) != 0) {
-    /* Handle error */
+    // Handle error 
   }
   if ((result = pthread_mutex_unlock(&(args->to->balance_mutex))) != 0) {
-    /* Handle error */
+    // Handle error 
   }
  
   free(ptr);
   return;
 }
+*/

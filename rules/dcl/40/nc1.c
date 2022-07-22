@@ -9,4 +9,4 @@ int f(unsigned int i, int x) {
 }
  
 /* In b.c */
-int a[] = { 1, 2, 3, 4 };   /* UB 15 */
+int b[] = { 1, 2, 3, 4 };   /* UB 15 */

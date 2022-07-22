@@ -1,6 +1,6 @@
 // FIO42-C: Noncompliant Code Example (Windows)
-#include <Windows.h>
- 
+//#include <Windows.h>
+/*
 int func(LPCTSTR filename) {
   HANDLE hFile = CreateFile(filename, GENERIC_READ, 0, NULL,
                             OPEN_EXISTING,
@@ -8,6 +8,7 @@ int func(LPCTSTR filename) {
   if (INVALID_HANDLE_VALUE == hFile) {
     return -1;
   }
-  /* ... */
+
   return 0;
 }
+*/

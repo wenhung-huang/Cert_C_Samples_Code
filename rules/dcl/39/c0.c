@@ -24,7 +24,7 @@ void do_stuff(void *usr_buf) {
   memcpy(buf + offset, &arg.c, sizeof(arg.c));
   offset += sizeof(arg.c);
   /* Set all remaining bytes to zero */
-  memset(buff + offset, 0, sizeof(arg) - offset);
+  memset(buf + offset, 0, sizeof(arg) - offset);
  
   copy_to_user(usr_buf, buf, offset /* size of info copied */);
 } 

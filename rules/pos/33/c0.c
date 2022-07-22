@@ -1,5 +1,14 @@
 // POS33-C: Compliant Solution
-char *filename = /* something */;
+#include <sys/stat.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <stdio.h>
+#include <signal.h>
+int main(){
+char *filename  /* something */;
  
 pid_t pid = fork();
 if (pid == 0) /* child */ {
@@ -7,4 +16,5 @@ if (pid == 0) /* child */ {
     /* Handle error */
   }
   _exit(1);  /* in case execve() fails */
+}
 }
